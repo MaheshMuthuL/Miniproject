@@ -1,5 +1,6 @@
 ## Title of the Project
 *AI-Based Law Inquiry Chatbot*
+
 This project is an AI-powered chatbot designed to answer queries related to legal topics, particularly focusing on the Indian Penal Code (IPC). The chatbot leverages the Llama model and FAISS vector store to implement a question-answering (QA) system. It processes legal PDF documents to generate embeddings, enabling efficient and accurate retrieval of information in response to user queries. By combining advanced language modeling with vector-based search, the chatbot ensures precise and context-aware answers tailored to users' legal inquiries.
 
 ## About
@@ -24,6 +25,67 @@ This project is an advanced AI-driven chatbot designed to address legal inquirie
 * Hardware Requirements:
    * Minimum 8 GB RAM (16 GB recommended for smooth performance).
 * Additional Dependencies: Includes transformers, faiss-cpu/faiss-gpu, sentence-transformers, pandas, streamlit, and scikit-learn.
+
+  
+## Disclaimer
+
+As of now, this repository contains only law-related content. Users are encouraged to modify and customize the content as needed. If you remove or alter the existing PDF documents, you are free to provide your respective PDF contents to tailor the application to your specific requirements.
+
+## Overview
+The system consists of two main components:
+1. Ingest.py: Responsible for loading PDF documents, creating embeddings, and saving them to a FAISS vector store.
+2. Model.py: Loads the Llama model, sets up a retrieval QA chain, and processes user queries.
+
+## Installation
+You can install the required libraries by running the following command in your Google Colab or local environment:
+```
+pip install langchain chainlit transformers sentence-transformers faiss-cpu huggingface_hub
+
+```
+
+## Getting Started
+
+To get started with the Llama2 Law Bot, you need to:
+
+Set up your environment and install the required packages as described in the Installation section.
+
+Configure your project by updating the DB_FAISS_PATH variable and any other custom configurations in the code.
+
+Prepare the language model and data as per the Langchain documentation.
+
+Start the bot by running the provided Python script or integrating it into your application.
+
+## Usage
+
+The Llama2 Law Bot can be used for answering law-related queries. To use the bot, you can follow these steps:
+
+1.Start the bot by running your application or using the provided Python script.
+
+2.Send a law-related query to the bot.
+
+3.The bot will provide a response based on the information available in its database.
+
+4.If sources are found, they will be provided alongside the answer.
+
+5.The bot can be customized to return specific information based on the query and context provided.
+
+## Running the Code:
+
+Step 1: Create Vector Store with ingest.py
+
+The first step is to ingest your PDF files and create the FAISS vector store.
+
+To run ingest.py:
+```
+python ingest.py
+```
+Step 2: Start the QA Bot with model.py
+
+To run model.py:
+```
+python model.py
+```
+
 
 ## Output
 
